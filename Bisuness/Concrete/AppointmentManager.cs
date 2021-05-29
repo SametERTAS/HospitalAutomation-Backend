@@ -1,5 +1,5 @@
-﻿using Bisuness.Abstract;
-using Bisuness.Contants;
+﻿using Business.Abstract;
+using Business.Contants;
 using Core.Utilities.Abstract;
 using Core.Utilities.Concrete;
 using DataAccess.Abstract;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bisuness.Concrete
+namespace Business.Concrete
 {
     public class AppointmentManager : IAppointmentService
     {
@@ -45,7 +45,7 @@ namespace Bisuness.Concrete
 
         public IDataResult<List<Appointment>> GetList()
         {
-            return new SuccessDataResult<List<Appointment>>(_appointmentDal.GetList().ToList());
+            return new SuccessDataResult<List<Appointment>>(_appointmentDal.GetList().ToList(),Messages.AppointmentListed);
         }
 
 

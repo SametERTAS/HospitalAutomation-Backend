@@ -2,12 +2,12 @@
 using Entities.Concrete;
 using System.Collections.Generic;
 
-namespace Bisuness.Abstract
+namespace Business.Abstract
 {
     public interface ICountryService
     {
         IDataResult<List<Country>> GetList();
-        IDataResult<Country> GetById(int id);
+        IDataResult<Country> GetByPhoneCode(int phoneCode);
         IResult Add(Country country);
         IResult Update(Country country);
         IResult Delete(Country country);

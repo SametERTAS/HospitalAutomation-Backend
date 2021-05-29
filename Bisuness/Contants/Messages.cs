@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bisuness.Contants
+namespace Business.Contants
 {
     public static class Messages
     {
@@ -22,5 +22,55 @@ namespace Bisuness.Contants
         public static string ClinicDeleted = "Clinic Deleted";
         public static string ClinicUpdated = "Clinic Updated";
         public static string ClinicListed = "Clinic Listed";
+
+        public static string CountryCreated = "Country Created";
+        public static string CountryDeleted = "Country Deleted";
+        public static string CountryUpdated = "Country Updated";
+        public static string CountryListed = "Country Listed";
+
+        public static string DistrictCreated = "District Created";
+        public static string DistrictDeleted = "District Deleted";
+        public static string DistrictUpdated = "District Updated";
+        public static string DistrictListed = "District Listed";
+
+        public static string ExaminationCreated = "Examination Created";
+        public static string ExaminationDeleted = "Examination Deleted";
+        public static string ExaminationUpdated = "Examination Updated";
+        public static string ExaminationListed = "Examination Listed";
+
+        public static string ExaminationTestCreated = "ExaminationTest Created";
+        public static string ExaminationTestDeleted = "ExaminationTest Deleted";
+        public static string ExaminationTestUpdated = "ExaminationTest Updated";
+        public static string ExaminationTestListed = "ExaminationTest Listed";
+
+        public static string HospitalClinicCreated = "HospitalClinic Created";
+        public static string HospitalClinicDeleted = "HospitalClinic Deleted";
+        public static string HospitalClinicUpdated = "HospitalClinic Updated";
+        public static string HospitalClinicListed = "HospitalClinic Listed";
+
+        public static string HospitalCreated = "Hospital Created";
+        public static string HospitalDeleted = "Hospital Deleted";
+        public static string HospitalUpdated = "Hospital Updated";
+        public static string HospitalListed = "Hospital Listed";
+
+        public static string MedicineCreated = "Medicine Created";
+        public static string MedicineDeleted = "Medicine Deleted";
+        public static string MedicineUpdated = "Medicine Updated";
+        public static string MedicineListed = "Medicine Listed";
+
+        public static string PrescriptionMedicineCreated = "PrescriptionMedicine Created";
+        public static string PrescriptionMedicineDeleted = "PrescriptionMedicine Deleted";
+        public static string PrescriptionMedicineUpdated = "PrescriptionMedicine Updated";
+        public static string PrescriptionMedicineListed = "PrescriptionMedicine Listed";
+
+        public static string PrescriptionCreated = "Prescription Created";
+        public static string PrescriptionDeleted = "Prescription Deleted";
+        public static string PrescriptionUpdated = "Prescription Updated";
+        public static string PrescriptionListed = "Prescription Listed";
+
+        public static string TestCreated = "Test Created";
+        public static string TestDeleted = "Test Deleted";
+        public static string TestUpdated = "Test Updated";
+        public static string TestListed = "Test Listed";
     }
 }

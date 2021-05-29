@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bisuness.Abstract
+namespace Business.Abstract
 {
     public interface IAppointmentService
     {

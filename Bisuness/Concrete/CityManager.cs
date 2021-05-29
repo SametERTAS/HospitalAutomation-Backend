@@ -1,5 +1,5 @@
-﻿using Bisuness.Abstract;
-using Bisuness.Contants;
+﻿using Business.Abstract;
+using Business.Contants;
 using Core.Utilities.Abstract;
 using Core.Utilities.Concrete;
 using DataAccess.Abstract;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bisuness.Concrete
+namespace Business.Concrete
 {
     public class CityManager : ICityService
     {
@@ -42,7 +42,7 @@ namespace Bisuness.Concrete
 
         public IDataResult<List<City>> GetList()
         {
-            return new SuccessDataResult<List<City>>(_cityDal.GetList().ToList());
+            return new SuccessDataResult<List<City>>(_cityDal.GetList().ToList(),Messages.CityListed);
         }
 
 

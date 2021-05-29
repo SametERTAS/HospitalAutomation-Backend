@@ -2,7 +2,7 @@
 using Entities.Concrete;
 using System.Collections.Generic;
 
-namespace Bisuness.Abstract
+namespace Business.Abstract
 {
     public interface IPrescriptionMedicineService
     {

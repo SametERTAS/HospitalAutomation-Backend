@@ -1,5 +1,5 @@
-﻿using Bisuness.Abstract;
-using Bisuness.Contants;
+﻿using Business.Abstract;
+using Business.Contants;
 using Core.Utilities.Abstract;
 using Core.Utilities.Concrete;
 using DataAccess.Abstract;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bisuness.Concrete
+namespace Business.Concrete
 {
     public class ClinicManager : IClinicService
     {
@@ -43,7 +43,7 @@ namespace Bisuness.Concrete
 
         public IDataResult<List<Clinic>> GetList()
         {
-            return new SuccessDataResult<List<Clinic>>(_clinicDal.GetList().ToList());
+            return new SuccessDataResult<List<Clinic>>(_clinicDal.GetList().ToList(),Messages.ClinicListed);
         }
 
 
