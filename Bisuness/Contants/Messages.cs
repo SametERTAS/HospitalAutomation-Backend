@@ -72,5 +72,7 @@ namespace Business.Contants
         public static string TestDeleted = "Test Deleted";
         public static string TestUpdated = "Test Updated";
         public static string TestListed = "Test Listed";
+
+        public static string UserCreated="User Created";
     }
 }

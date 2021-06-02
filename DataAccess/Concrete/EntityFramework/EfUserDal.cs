@@ -22,13 +22,11 @@ namespace DataAccess.Concrete.EntityFramework
                              on oc.Id equals uoc.OperationClaimId
                              where uoc.UserId == user.Id
                              select new OperationClaim { Id = oc.Id, Name = oc.Name };
-                    
-                    
-                   /* 
-                    * context.UserOperationClaims.Include(x => x.OperationClaim)
-                    .Where(x => x.UserId == user.Id)
-                    .Select(x => new OperationClaim { Id = x.OperationClaim.Id, Name = x.OperationClaim.Name }).ToList();
-                   */
+
+
+                var result2 = context.UserOperationClaims.Join(context.OperationClaims, uoc => uoc.OperationClaimId, oc => oc.Id, (uoc, oc) => new { Id = oc.Id,Name = oc.Name ,UserId=uoc.UserId}).Where(x=>x.UserId==1).ToList();
+                  
+                  
 
                 return result.ToList();
             }

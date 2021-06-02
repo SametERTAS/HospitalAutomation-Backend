@@ -62,6 +62,8 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<TestManager>().As<ITestService>();
             builder.RegisterType<EfTestDal>().As<ITestDal>();
 
+            builder.RegisterType<UserManager>().As<IUserService>();
+            builder.RegisterType<EfUserDal>().As<IUserDal>();
         }
     }
 }
