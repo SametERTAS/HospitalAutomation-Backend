@@ -10,6 +10,7 @@ namespace Entities.Concrete
     {
         public int CountryId { get; set; }   // FK
         public int PlateCode { get; set; }
-        
+        public Country Country { get; set; }
+
     }
 }

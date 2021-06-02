@@ -13,6 +13,14 @@ namespace Business.DependencyResolvers.Autofac
 {
     public class AutofacBusinessModule : Module
     {
+
+        /*
+                IoC     inversion of control 
+        */
+
+
+
+
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<AppointmentManager>().As<IAppointmentService>();
@@ -57,3 +65,5 @@ namespace Business.DependencyResolvers.Autofac
         }
     }
 }
+
+

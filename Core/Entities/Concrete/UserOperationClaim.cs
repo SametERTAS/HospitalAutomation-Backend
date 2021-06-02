@@ -15,6 +15,9 @@ namespace Core.Entities.Concrete
         public int OperationClaimId { get; set; }
         public DateTime CreatedDate { get; set; }
         public bool IsActive { get; set; }
+
+     //   public User User { get; set; }
+     //   public OperationClaim OperationClaim { get; set; }
     }
 
 }
