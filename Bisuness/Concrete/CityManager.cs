@@ -1,7 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Contants;
-using Core.Utilities.Abstract;
-using Core.Utilities.Concrete;
+using Core.Utilities.Result.Abstract;
+using Core.Utilities.Result.Concrete;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;

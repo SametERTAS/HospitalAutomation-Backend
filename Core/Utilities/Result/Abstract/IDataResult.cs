@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Utilities.Abstract
+namespace Core.Utilities.Result.Abstract
 {
-    public interface IDataResult<out T> :IResult
+    public interface IDataResult<out T> : IResult
     {
         T Data { get; }
     }

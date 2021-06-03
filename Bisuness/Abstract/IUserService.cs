@@ -1,5 +1,5 @@
 ﻿using Core.Entities.Concrete;
-using Core.Utilities.Abstract;
+using Core.Utilities.Result.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
