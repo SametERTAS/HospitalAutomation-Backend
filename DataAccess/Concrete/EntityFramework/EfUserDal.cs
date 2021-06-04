@@ -17,18 +17,18 @@ namespace DataAccess.Concrete.EntityFramework
         {
             using (var context = new HospitalAutomationContext())
             {
-                var result = from oc in context.OperationClaims
-                             join uoc in context.UserOperationClaims
-                             on oc.Id equals uoc.OperationClaimId
-                             where uoc.UserId == user.Id
-                             select new OperationClaim { Id = oc.Id, Name = oc.Name };
+                /* 
+                 var result = from oc in context.OperationClaims
+                              join uoc in context.UserOperationClaims
+                              on oc.Id equals uoc.OperationClaimId
+                              where uoc.UserId == user.Id
+                              select new OperationClaim { Id = oc.Id, Name = oc.Name };
+                  return result.ToList();
+                 */
 
-
-                var result2 = context.UserOperationClaims.Join(context.OperationClaims, uoc => uoc.OperationClaimId, oc => oc.Id, (uoc, oc) => new { Id = oc.Id,Name = oc.Name ,UserId=uoc.UserId}).Where(x=>x.UserId==1).ToList();
-                  
-                  
-
+                var result = context.UserOperationClaims.Where(x => x.UserId == user.Id).Join(context.OperationClaims, uoc => uoc.OperationClaimId, oc => oc.Id, (uoc, oc) => new OperationClaim { Id = oc.Id, Name = oc.Name });
                 return result.ToList();
+
             }
         }
     }
