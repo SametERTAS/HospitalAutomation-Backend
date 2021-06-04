@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Core.Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Contants
+namespace Business.Constants
 {
     public static class Messages
     {
@@ -73,6 +74,12 @@ namespace Business.Contants
         public static string TestUpdated = "Test Updated";
         public static string TestListed = "Test Listed";
 
-        public static string UserCreated="User Created";
+        public static string UserCreated = "User Created";
+        public static string UserNotFound = "User could not found";
+        public static string PasswordError = "Incorrect password";
+        public static string SuccessfulLogin = "Login is successful";
+        public static string UserExistsError = "User already exists";
+        public static string UserRegistered = "User registered";
+        public static string AccessTokenCreated = "Access token Created";
     }
 }

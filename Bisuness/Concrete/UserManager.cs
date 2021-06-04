@@ -1,5 +1,5 @@
 ﻿using Business.Abstract;
-using Business.Contants;
+using Business.Constants;
 using Core.Entities.Concrete;
 using Core.Utilities.Result.Concrete;
 using Core.Utilities.Result.Abstract;
@@ -15,6 +15,7 @@ namespace Business.Concrete
     public class UserManager : IUserService
     {
         private IUserDal _userDal;
+
         public UserManager(IUserDal userDal)
         {
             _userDal = userDal;
@@ -28,7 +29,7 @@ namespace Business.Concrete
         public IDataResult<User> GetByMail(string email)
         {
 
-            return new SuccessDataResult<User>(_userDal.Get(x => x.Email.ToLower().Contains(email.ToLower())));
+            return new SuccessDataResult<User>(_userDal.Get(x => x.Email == email));
         }
 
         public IDataResult<List<OperationClaim>> GetClaims(User user)

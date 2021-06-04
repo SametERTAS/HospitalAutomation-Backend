@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Entities.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -20,6 +21,7 @@ namespace WebAPI.Controllers
         }
         [HttpGet]                                                                     // when you call just controller and get method
         [HttpGet("getall")]                                                           // when you call controller + this name "getall"
+      //  [Authorize()]
         public IActionResult Get()
         {
             var result = _countryService.GetList();
