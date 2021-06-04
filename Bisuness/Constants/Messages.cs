@@ -81,5 +81,15 @@ namespace Business.Constants
         public static string UserExistsError = "User already exists";
         public static string UserRegistered = "User registered";
         public static string AccessTokenCreated = "Access token Created";
+
+
+
+
+        public static string OperationClaimCreated = "Operation claim Created";
+        public static string OperationClaimGetByName = "Operation claim was brought by name";
+        public static string OperationClaimListed = "Operation claims were listed";
+
+
+        public static string UserOperationClaimCreated = "User operation claim created";
     }
 }
