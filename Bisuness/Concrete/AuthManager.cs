@@ -36,16 +36,16 @@ namespace Business.Concrete
 
         public IDataResult<User> Login(UserForLoginDto userForLoginDto)
         {
-            var userToChech = _userService.GetByMail(userForLoginDto.Email);
+            var userToChech = _userService.GetByMail(userForLoginDto.Email).Data;
             if (userToChech == null)
             {
                 return new ErrorDataResult<User>(Messages.UserNotFound);
             }
-            if (HashingHelper.VerifyPasswordHash(userForLoginDto.Password, userToChech.Data.PasswordHash, userToChech.Data.PasswordSalt))
+            if (!HashingHelper.VerifyPasswordHash(userForLoginDto.Password, userToChech.PasswordHash, userToChech.PasswordSalt))
             {
                 return new ErrorDataResult<User>(Messages.PasswordError);
             }
-            return new SuccessDataResult<User>(userToChech.Data, Messages.SuccessfulLogin);
+            return new SuccessDataResult<User>(userToChech, Messages.SuccessfulLogin);
         }
 
         public IDataResult<User> Register(UserForRegisterDto userForRegisterDto)
