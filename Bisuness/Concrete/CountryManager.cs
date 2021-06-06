@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Result.Abstract;
 using Core.Utilities.Result.Concrete;
@@ -14,6 +15,7 @@ using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
+    
     public class CountryManager : ICountryService
     {
         private ICountryDal _countryDal;
@@ -21,7 +23,7 @@ namespace Business.Concrete
         {
             _countryDal = countryDal;
         }
-        [ValidationAspect(typeof(CountryValidator),Priority =1)]
+        [ValidationAspect(typeof(CountryValidator), Priority = 1)]
         public IResult Add(Country country)
         {
             _countryDal.Add(country);
@@ -47,7 +49,13 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<Country>>(_countryDal.GetList().ToList(), Messages.CountryListed);
         }
+        [TransactionScopeAspect]
+        public IResult TransactionalOperation(Country country)
+        {
+            _countryDal.Update(country);
+         //  _countryDal.Add(country);
+            return new SuccessResult(Messages.CountryUpdated);
 
-
+        }
     }
 }

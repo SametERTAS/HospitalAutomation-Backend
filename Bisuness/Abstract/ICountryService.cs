@@ -11,6 +11,8 @@ namespace Business.Abstract
         IResult Add(Country country);
         IResult Update(Country country);
         IResult Delete(Country country);
+
+        IResult TransactionalOperation(Country country);
     }
 
 }

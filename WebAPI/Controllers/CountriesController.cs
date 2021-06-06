@@ -82,5 +82,18 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result.Message);
         }
+
+        [HttpPost("transaction")]
+
+        public IActionResult TransactionTest(Country country)
+        {
+            var result = _countryService.TransactionalOperation(country);
+
+            if (result.Success)
+            {
+                return Ok(result.Message);
+            }
+            return BadRequest(result.Message);
+        }
     }
 }

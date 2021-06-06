@@ -14,6 +14,7 @@ namespace Business.ValidationRules.FluentValidation
         {
             RuleFor(c => c.Name).NotEmpty();
             RuleFor(c => c.Name).Length(3, 30);
+            RuleFor(c => c.PhoneCode).GreaterThan(12);
            
         }
     }
