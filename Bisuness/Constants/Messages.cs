@@ -91,5 +91,9 @@ namespace Business.Constants
 
 
         public static string UserOperationClaimCreated = "User operation claim created";
+
+
+        public static string CityCountOfCountryError = "City count can not be greater than 20 for a country";
+        internal static string CountryCountLimitExceded = "Country count can not be more than 20";
     }
 }

@@ -13,6 +13,8 @@ namespace Business.Abstract
         IResult Delete(Country country);
 
         IResult TransactionalOperation(Country country);
+
+
     }
 
 }
