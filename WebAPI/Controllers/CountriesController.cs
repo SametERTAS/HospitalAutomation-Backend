@@ -21,7 +21,7 @@ namespace WebAPI.Controllers
         }
         [HttpGet]                                                                     // when you call just controller and get method
         [HttpGet("getall")]                                                           // when you call controller + this name "getall"
-        [Authorize(Roles ="Admin")]
+      //  [Authorize(Roles ="Admin")]                                                // deneme
         public IActionResult Get()
         {
             var result = _countryService.GetList();
