@@ -28,6 +28,7 @@ namespace Business.DependencyResolvers.Autofac
 
         protected override void Load(ContainerBuilder builder)
         {
+            // builder.RegisterType<AppointmentManager>().As<IAppointmentService>().SingleInstance();
             builder.RegisterType<AppointmentManager>().As<IAppointmentService>();
             builder.RegisterType<EfAppointmentDal>().As<IAppointmentDal>();
 

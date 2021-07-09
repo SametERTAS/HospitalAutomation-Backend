@@ -21,11 +21,11 @@ namespace WebAPI
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-            .UseServiceProviderFactory(new AutofacServiceProviderFactory())
-            .ConfigureContainer<ContainerBuilder>(builder =>
-            {
-                builder.RegisterModule(new AutofacBusinessModule());
-            })
+       /* using autofac*/     .UseServiceProviderFactory(new AutofacServiceProviderFactory())
+       /**/     .ConfigureContainer<ContainerBuilder>(builder =>
+       /**/     {
+       /**/         builder.RegisterModule(new AutofacBusinessModule());
+       /**/     })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
